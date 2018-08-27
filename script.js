@@ -157,6 +157,7 @@
   function displayNext() {
     quiz.fadeOut(function() {
       $('#question').remove();
+      $('#intro').remove();
       
       if(questionCounter < questions.length){
         var nextQuestion = createQuestionElement(questionCounter);
