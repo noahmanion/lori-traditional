@@ -75,6 +75,14 @@
     $('#start').hide();
   });
 
+    // Animates buttons on hover
+  $('.button').on('mouseenter', function () {
+    $(this).addClass('active');
+  });
+  $('.button').on('mouseleave', function () {
+    $(this).removeClass('active');
+  });
+
     //creates an intro text element
   function createIntroElement() {
     var iElement = $('<div>', {
@@ -84,20 +92,12 @@
     var logo  = $('<img src="" id="logo"/>');
     iElement.append(logo);
 
-    var introText = $('<p>Lorem ipsum dolor amet helvetica photo booth jianbing drinking vinegar. Keytar tote bag activated charcoal, butcher edison bulb green juice tumblr hammock meditation kickstarter unicorn DIY waistcoat pitchfork single-origin coffee. </p>');
+    var introText = $('<p>Test your knowledge about Eat Purely and get </p> <p><strong>A Free Meal From Eat Purely</strong></p>');
     iElement.append(introText);
 
     return iElement;
 
   }
-  
-  // Animates buttons on hover
-  $('.button').on('mouseenter', function () {
-    $(this).addClass('active');
-  });
-  $('.button').on('mouseleave', function () {
-    $(this).removeClass('active');
-  });
   
   // Creates and returns the div that contains the questions and 
   // the answer selections
@@ -107,13 +107,13 @@
     });
     
     var header = $('<h2>Question ' + (index + 1) + ':</h2>');
-    qElement.append(header);
+    qElement.append(header.addClass("q"));
 
-    var photo = $('<img src="' + questions[index].question + '" />');
-    qElement.append(question);
+    var photo = $('<img src="' + questions[index].photo + '" id="qphoto" />');
+    qElement.append(photo.addClass("q"));
     
     var question = $('<p>').append(questions[index].question);
-    qElement.append(question);
+    qElement.append(question.addClass("q"));
 
     
     var radioButtons = createRadios(index);
@@ -182,7 +182,7 @@
         $('#next').hide();
         $('#prev').hide();
         $('#begin').hide();
-        $('#start').show();
+        $('#start').hide();
       }
     });
   }
@@ -200,6 +200,9 @@
     
     score.append('You got ' + numCorrect + ' questions out of ' +
                  questions.length + ' right!!!');
+
+    var offer = $('<button id="offer" href="https://eatpurely.com/register">Click Here to Redeem Your Free Meal</button>')
+    score.append(offer);
     return score;
   }
 })();
