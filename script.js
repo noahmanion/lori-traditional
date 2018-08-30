@@ -135,6 +135,7 @@
     $('#begin').show();
   }
 
+  //create an element containing some small text for an answer
     function createAnswerElement(index) {
       var aElement = $('<div>', {
         id: 'answer'
@@ -185,6 +186,7 @@
     });
   }
 
+  //displays the answer element
   function displayAnswer() {
     quiz.fadeOut(function() {
       $('#question').remove();
