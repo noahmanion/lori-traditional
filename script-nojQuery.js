@@ -34,7 +34,7 @@
     //iElement.appendChild(introText);
     console.log(iElement)
   }
-
+g
   function displayIntro() {
     //var intro = createIntroElement();
     var iElement = document.createElement('div');
