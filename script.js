@@ -1,16 +1,16 @@
 (function() {
   var questions = [{
     question: "What is this?",
-    choices: ["Impossible Balls", "Salmon Romseco"],
+    choices: ["Impossible Meatballs", "Salmon Romseco"],
     correctAnswer: 0,
     photo: "images/balls.jpg",
-    answerText: "Lorem Ipsum text about the answer"
+    answerText: "You won't miss the meat in this dish featuring meatballs served with impossible meat atop pasta."
   }, {
     question: "What is this?",
-    choices: ["Impossible Balls", "Salmon Romseco"],
+    choices: ["Impossible Meatballs", "Salmon Romseco"],
     correctAnswer: 1,
     photo: "images/salmon.jpg",
-    answerText: "Lorem Ipsum text about the answer"
+    answerText: "Grilled salmon is served under a charred tomato romesco sauce."
   }];
 
   var questionCounter = 0; //Tracks question number
